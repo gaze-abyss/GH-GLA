@@ -1,0 +1,14 @@
+Package: gbas
+Title: Gene-based Association Studies
+Version: 0.0.0.9000
+Authors@R: 
+    person("Haojie Wang", email = "hjwang@genetics.ac.cn", role = c("aut","com","cph","cre"))
+Description: test.
+License: `use_mit_license()`, `use_gpl3_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.0
+NeedsCompilation: no
+Packaged: 2024-03-24 05:52:53 UTC; hjwang
+Author: Haojie Wang [aut, com, cph, cre]
+Maintainer: Haojie Wang <hjwang@genetics.ac.cn>
