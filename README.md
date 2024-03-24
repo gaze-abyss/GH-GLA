@@ -1,5 +1,5 @@
 # gbas
-a R package for gene-based association study
+A R package for gene-based association study
 
 on Linux
 2024.3.24
