@@ -6,7 +6,7 @@ on Linux
 
 ## install
 you can install gbas:
-```
+```R
 devtools::install_github("gaze-abyss/gbas")
 ```
 
