@@ -7,6 +7,7 @@ on Linux
 ## install
 you can install gbas:
 ```R
+install.packages("devtools")
 devtools::install_github("gaze-abyss/gbas")
 ```
 
