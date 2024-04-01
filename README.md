@@ -24,14 +24,14 @@ Model3 requires SnpEff results.
 You can choose to use model2 or model3(Model1 is a test model, not available).
 
 ```R
-gbas_model3("chr2D",                        #Some species' genomes are so large that they can only be counted in terms of chromosomes
-2,                                          #Which column of phenotype data is used
-"/path/data.gene.list",                     #gene interval file
-"/path/chr2D.annotesplit.filter.vcf",       #SnpEff results
-"/path/control_group_phenotype.csv",        #Phenotype data for the control group
-"/path/vcftoolsres/yourname",               #vcftools results
-"/path/phenotype.csv",                      #phenotype data
-"/output_path/")
+gbas_model3("chr2D",                                  #Some species' genomes are so large that they can only be counted in terms of chromosomes
+            2,                                        #Which column of phenotype data is used
+            "/path/data.gene.list",                   #gene interval file
+            "/path/chr2D.annotesplit.filter.vcf",     #SnpEff results
+            "/path/control_group_phenotype.csv",      #Phenotype data for the control group
+            "/path/vcftoolsres/yourname",             #vcftools results
+            "/path/phenotype.csv",                    #phenotype data
+            "/output_path/")
 ```
 
 ## about gbas
