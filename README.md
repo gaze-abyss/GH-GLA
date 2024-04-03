@@ -5,11 +5,12 @@ on Linux
 2024.3.24
 
 ## install
+Need to install in advance: stringr, dplyr \
 you can install gbas:
 ```R
 install.packages("devtools")
 devtools::install_github("gaze-abyss/gbas")
-```
+``` 
 
 ## input data
 
