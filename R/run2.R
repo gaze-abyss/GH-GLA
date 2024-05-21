@@ -100,12 +100,13 @@ gbas_model2 = function(filename,pheno_column,gene_region,anno,wt,genotype_path,p
   cut_down_sample = rownames(res.score)[which(res.score$pheno2 < cut_down)]
   mutant_sample = c(cut_up_sample,cut_down_sample)
   
+  wt_num = length(wildtype[,1] %in% rownames(res.score) == T)
   chi.res = c()
   for (i in 1:(dim(res.score)[2]-1)){
     r1 = length(which(res.score[rownames(res.score)%in%mutant_sample,i] > 1.001))
     r2 = length(mutant_sample) -r1
     r3 = length(which(res.score[!rownames(res.score)%in%mutant_sample,i] > 1.001))
-    r4 = dim(res.score)[1]-7- length(mutant_sample) -r3
+    r4 = dim(res.score)[1]- wt_num - length(mutant_sample) -r3
     enrichment = matrix(c(r1, r2, r3 ,r4),ncol=2, dimnames = list(c('mutation','nomutation'),
                                                                   c('yes','no')))
     chi = fisher.test(enrichment)
