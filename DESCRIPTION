@@ -3,7 +3,7 @@ Title: Gene Hunter based on Gene-Level Association (GH-GLA)
 Version: 0.0.0.9100
 Authors@R: 
     person("Haojie Wang", email = "hjwang@genetics.ac.cn", role = c("aut","com","cph","cre"))
-Description: test.
+Description: beta.
 License: `use_mit_license()`, `use_gpl3_license()`
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
