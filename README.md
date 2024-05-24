@@ -6,7 +6,7 @@ on Linux
 
 ## install
 Need to install in advance: data.table, stringr, dplyr \
-You can install gbas:
+You can install GHGLA:
 ```R
 install.packages("devtools")
 devtools::install_github("gaze-abyss/GH-GLA")
