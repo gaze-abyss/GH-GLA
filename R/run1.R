@@ -1,4 +1,4 @@
-#' @title Package gbas_model3
+#' @title Package GH-GLA_model3
 #'
 #' @param pheno_column numbers
 #' @param gene_region path, txtfile
@@ -17,7 +17,7 @@
 #' @import dplyr
 #'
 #' @examples
-#' gbas_model3("chr4A",2,"/path/data.gene.list",
+#' gla_model3("chr4A",2,"/path/data.gene.list",
 #' "/path/chr4A.annotesplit.filter.vcf",
 #' "/path/wildtype.csv",
 #' "/path/vcftoolsres/",
@@ -25,7 +25,7 @@
 #' "/respath/")
 #'
 
-gbas_model3 = function(filename,pheno_column,gene_region,anno,wt,genotype_path,phenotype,outpath){
+gla_model3 = function(filename,pheno_column,gene_region,anno,wt,genotype_path,phenotype,outpath){
 
   df = fread(paste0(genotype_path,"/",filename,".012"),header = F)
   df = df[,-1]
