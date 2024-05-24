@@ -1,15 +1,15 @@
-# gbas
+# Gene Hunter based on Gene-Level Association (GH-GLA)
 A R package for gene-based association study
 
 on Linux
-2024.3.24
+2024.5.22
 
 ## install
-Need to install in advance: stringr, dplyr \
+Need to install in advance: data.table, stringr, dplyr \
 You can install gbas:
 ```R
 install.packages("devtools")
-devtools::install_github("gaze-abyss/gbas")
+devtools::install_github("gaze-abyss/GH-GLA")
 ``` 
 
 ## input data
@@ -42,4 +42,4 @@ gbas_model3("chr2D",                                  #Some species' genomes are
 ```
 
 ## about gbas
-> It is currently in beta and features are not complete
+> It is currently in beta and the features are not complete
