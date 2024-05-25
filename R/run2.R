@@ -85,22 +85,21 @@ gla_model2 = function(filename,pheno_column,gene_region,anno,wt,genotype_path,ph
   if (length(which(is.na(res.score$pheno2) == T)) != 0) {
     res.score = res.score[-which(is.na(res.score$pheno2) == T),]
   }
-  
-  ####mutation enrichment
-  
-  pheno_wt = read.csv(wt)
-  pheno_wt = pheno_wt[,pheno_column]
-  cut_up = mean(pheno_wt)*cutup
-  cut_down = mean(pheno_wt)*cutdown
   if (length(which(is.na(res.score$pheno2) == T)) != 0) {
     res.score = res.score[-which(is.na(res.score$pheno2) == T),]
   }
+  ####mutation enrichment  
+  pheno_wt = read.csv(wt)
+  pheno_wt = pheno_wt[pheno_wt$X %in% rownames(res.score),]
+  pheno_wt = pheno_wt[,pheno_column]
+  cut_up = mean(pheno_wt)*cutup
+  cut_down = mean(pheno_wt)*cutdown
   
   cut_up_sample = rownames(res.score)[which(res.score$pheno2 > cut_up)]
   cut_down_sample = rownames(res.score)[which(res.score$pheno2 < cut_down)]
   mutant_sample = c(cut_up_sample,cut_down_sample)
   
-  wt_num = length(wildtype[,1] %in% rownames(res.score) == T)
+  wt_num = length(pheno_wt)
   chi.res = c()
   for (i in 1:(dim(res.score)[2]-1)){
     r1 = length(which(res.score[rownames(res.score)%in%mutant_sample,i] > 1.001))
