@@ -90,7 +90,7 @@ gla_model2 = function(filename,pheno_column,gene_region,anno,wt,genotype_path,ph
   }
   ####mutation enrichment  
   pheno_wt = read.csv(wt)
-  pheno_wt = pheno_wt[pheno_wt$X %in% rownames(res.score),]
+  pheno_wt = pheno_wt[pheno_wt[,1] %in% rownames(res.score),]
   pheno_wt = pheno_wt[,pheno_column]
   cut_up = mean(pheno_wt)*cutup
   cut_down = mean(pheno_wt)*cutdown
