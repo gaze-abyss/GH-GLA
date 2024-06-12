@@ -1,5 +1,5 @@
 # Gene Hunter based on Gene-Level Association (GH-GLA)
-A R package for gene-based association study
+A R-package for gene-based association study
 
 on Linux
 2024.5.22
