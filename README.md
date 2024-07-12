@@ -20,7 +20,7 @@ vcftools --gzvcf yourname.vcf.gz --012 --out yourname
 ```
 The phenotype data must be in csv format(There can be multiple phenotypes in this csv, each phenotype is a separate column), and a gene interval file that requires a special processing. \
 Phenotype data for the control group are also required. \
-Model3 requires SnpEff results, and refer to the examples in the data folder for specific requirements.
+Model3 requires SnpEff results, and refer to the examples in the `/data` for specific requirements.
 ```shell
 snpEff wheat yourname.chr2D.vcf.gz > yourname.chr2D.annotesplit.vcf
 ```
