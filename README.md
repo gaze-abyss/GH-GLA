@@ -2,7 +2,7 @@
 A R-package for gene-based association study
 
 on Linux
-2024.5.22
+2024.7.12
 
 ## install
 Need to install in advance: data.table, stringr, dplyr \
@@ -20,7 +20,7 @@ vcftools --gzvcf yourname.vcf.gz --012 --out yourname
 ```
 The phenotype data must be in csv format(There can be multiple phenotypes in this csv, each phenotype is a separate column), and a gene interval file that requires a special processing. \
 Phenotype data for the control group are also required. \
-Model3 requires SnpEff results.
+Model3 requires SnpEff results, and refer to the examples in the data folder for specific requirements.
 ```shell
 snpEff wheat yourname.chr2D.vcf.gz > yourname.chr2D.annotesplit.vcf
 ```
