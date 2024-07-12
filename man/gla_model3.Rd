@@ -40,7 +40,7 @@ Package gbas_model3
 }
 \examples{
 gla_model3("chr4A",2,"/path/data.gene.list",
-"/path/chr4A.annotesplit.filter.vcf",
+"/path/chr4A.anno.txt",
 "/path/wildtype.csv",
 "/path/vcftoolsres/",
 "/path/phenotype.csv",
