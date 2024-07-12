@@ -22,7 +22,7 @@ The phenotype data must be in csv format(There can be multiple phenotypes in thi
 Phenotype data for the control group are also required. \
 Model3 requires SnpEff results, and refer to the examples in the `/data` for specific requirements.
 ```shell
-snpEff wheat yourname.chr2D.vcf.gz > yourname.chr2D.annotesplit.vcf
+java -jar snpEff wheat yourname.chr2D.vcf.gz > yourname.snpEff.vcf
 ```
 
 ## usage
