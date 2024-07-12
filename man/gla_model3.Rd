@@ -22,7 +22,7 @@ gla_model3(
 
 \item{gene_region}{path, txtfile}
 
-\item{anno}{path,vcffile}
+\item{anno}{path,txtfile}
 
 \item{wt}{path,csvfile}
 
