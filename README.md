@@ -26,7 +26,7 @@ java -jar snpEff wheat yourname.chr2D.vcf.gz > yourname.snpEff.vcf
 ```
 
 ## usage
-You can choose to use model2 or model3(Model1 is a test model, not available).
+You can choose to use gla_model2 or gla_model3(Model1 is test model, not available).
 
 ```R
 rm(list=ls())
