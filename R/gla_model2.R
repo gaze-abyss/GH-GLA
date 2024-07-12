@@ -2,7 +2,7 @@
 #'
 #' @param pheno_column numbers
 #' @param gene_region path, txtfile
-#' @param anno path,vcffile
+#' @param anno path,txtfile
 #' @param wt path,csvfile
 #' @param phenotype path,csvfile
 #' @param filename character,vcftools output file
@@ -19,15 +19,27 @@
 #' @import dplyr
 #'
 #' @examples
-#' gla_model3("chr4A",2,"/path/data.gene.list",
-#' "/path/chr4A.annotesplit.filter.vcf",
+#' gla_model3("chr4A",
+#' 2,
+#' "/path/data.gene.list",
+#' "/path/chr4A.anno.txt",
 #' "/path/wildtype.csv",
 #' "/path/vcftoolsres/",
 #' "/path/phenotype.csv",
-#' "/respath/",1.05,0.95)
+#' "/respath/",
+#' 1.05,
+#' 0.95)
 #'
 
-gla_model2 = function(filename,pheno_column,gene_region,anno,wt,genotype_path,phenotype,outpath,cutup,cutdown){
+gla_model2 = function(filename,
+                      pheno_column,
+                      gene_region,
+                      anno,wt,
+                      genotype_path,
+                      phenotype,
+                      outpath,
+                      cutup,
+                      cutdown){
   
   df = fread(paste0(genotype_path,"/",filename,".012"),header = F)
   df = df[,-1]
