@@ -2,7 +2,7 @@
 A R-package for gene-based association study
 
 on Linux
-2024.7.12
+2025.3.19
 
 ## install
 Need to install in advance: data.table, stringr, dplyr \
