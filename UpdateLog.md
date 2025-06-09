@@ -1,3 +1,6 @@
+# V0.95  2025.6.9
+Improve the parameter tuning guidance, usage workflows and other instruction documents, and add result examples
+
 # V0.93  2025.3.19
 Upload the genotype test file
 
