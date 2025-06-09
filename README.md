@@ -65,6 +65,12 @@ gla_model3("chr2D",                                   #Some species' genomes are
 ```
 
 ### out
+```R
+pheno_column = 2 #Which column of phenotype data is used
+data = readRDS(paste0("/output_path/model2",pheno_column,".rds"))
+head(data)
+```
+
 ```
      pvalue           genename
 1 0.1161946 TraesKN2D01HG00010
