@@ -35,6 +35,7 @@ gla_model3 = function(filename,
                       genotype_path,
                       phenotype,
                       outpath){
+  ####inputdata
   df = fread(paste0(genotype_path,"/",filename,".012"),header = F)
   df = df[,-1]
   pos = read.table(paste0(genotype_path,"/",filename,".012.pos"))
