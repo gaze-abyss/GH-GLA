@@ -36,10 +36,12 @@ gla_model3(
 RDS
 }
 \description{
-Package gbas_model3
+Package gla_model3
 }
 \examples{
-gla_model3("chr4A",2,"/path/data.gene.list",
+gla_model3("chr4A",
+2,
+"/path/data.gene.list",
 "/path/chr4A.anno.txt",
 "/path/wildtype.csv",
 "/path/vcftoolsres/",
