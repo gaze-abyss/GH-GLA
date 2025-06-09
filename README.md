@@ -32,19 +32,22 @@ Project website of the SnpEff: https://pcingola.github.io/SnpEff/
 You can choose to use gla_model2 or gla_model3(Model1 is test model, not available).
 
 ### start
-Write the path of the input data into the function
+Write the parameters into the function. The meanings of the parameters can be found in the annotation in the code below. The format of the input data can refer to the example in /data.
 
 ```R
 rm(list=ls())
 library(GHGLA)
 gla_model2("chr2D",                                   #Some species' genomes are so large that they can only be counted in terms of chromosomes
             2,                                        #Which column of phenotype data is used
-            "/path/data.gene.list",                   #gene interval file
+            "/path/data.gene.list",                   #Gene interval file
             "/path/chr2D.anno.txt",                   #SnpEff results
             "/path/control_group_phenotype.csv",      #Phenotype data for the control group
-            "/path/vcftoolsres/yourname",             #vcftools results
-            "/path/phenotype.csv",                    #phenotype data
-            "/output_path/")
+            "/path/vcftoolsres/yourname",             #Vcftools results
+            "/path/phenotype.csv",                    #Phenotype data
+            "/output_path/",                          #Output path
+            1.05,                                     #The upper threshold of phenotypic variation, it can be adjusted according to different data characteristics
+            0.95                                      #The lower threshold of phenotypic variation, it can be adjusted according to different data characteristics
+            )
 ```
 or
 ```R
@@ -52,12 +55,13 @@ rm(list=ls())
 library(GHGLA)
 gla_model3("chr2D",                                   #Some species' genomes are so large that they can only be counted in terms of chromosomes
             2,                                        #Which column of phenotype data is used
-            "/path/data.gene.list",                   #gene interval file
+            "/path/data.gene.list",                   #Gene interval file
             "/path/chr2D.anno.txt",                   #SnpEff results
             "/path/control_group_phenotype.csv",      #Phenotype data for the control group
-            "/path/vcftoolsres/yourname",             #vcftools results
-            "/path/phenotype.csv",                    #phenotype data
-            "/output_path/")
+            "/path/vcftoolsres/yourname",             #Vcftools results
+            "/path/phenotype.csv",                    #Phenotype data
+            "/output_path/"
+            )
 ```
 
 ### out
