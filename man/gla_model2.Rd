@@ -42,7 +42,7 @@ gla_model2(
 RDS
 }
 \description{
-Package gla_model2
+description of gla_model2
 }
 \examples{
 gla_model2("chr4A",
