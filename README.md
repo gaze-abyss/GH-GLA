@@ -67,7 +67,7 @@ gla_model3("chr2D",                                   #Some species' genomes are
 ### out
 
 ## Citation
-If you make use of GH-GLA in your research, we would appreciate a citation of the following paper: \
+If you make use of GH-GLA in your research, we would appreciate a citation of the following paper: 
 > **Wang et al., (2025). A forward genetics strategy for high-throughput gene identification via precise image-based phenotyping of an indexed EMS mutant library** 
 
 ## about GH-GLA
