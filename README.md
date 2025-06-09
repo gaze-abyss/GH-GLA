@@ -65,10 +65,11 @@ gla_model3("chr2D",                                   #Some species' genomes are
 ```
 
 ### out
+The calculation results will be saved as RDS files.
 ```R
 filename = "chr2D" #Which file of genotype data is used
 pheno_column = 2 #Which column of phenotype data is used
-data = readRDS(paste0(outpath,"/model2_",filename,"_",pheno_column,".rds"))
+data = readRDS(paste0("/output_path/model2_",filename,"_",pheno_column,".rds"))
 head(data)
 ```
 
