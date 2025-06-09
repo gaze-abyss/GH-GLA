@@ -60,7 +60,7 @@ gla_model3("chr2D",                                   #Some species' genomes are
             "/path/control_group_phenotype.csv",      #Phenotype data for the control group
             "/path/vcftoolsres/yourname",             #Vcftools results
             "/path/phenotype.csv",                    #Phenotype data
-            "/output_path/"
+            "/output_path/"                           #Output path
             )
 ```
 
