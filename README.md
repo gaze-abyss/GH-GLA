@@ -41,5 +41,7 @@ gla_model3("chr2D",                                   #Some species' genomes are
             "/output_path/")
 ```
 
+### out
+
 ## about GH-GLA
 > It is currently in beta and the features are not complete
