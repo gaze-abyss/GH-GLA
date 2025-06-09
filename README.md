@@ -28,6 +28,22 @@ java -jar snpEff wheat yourname.chr2D.vcf.gz > yourname.snpEff.vcf
 ## usage
 You can choose to use gla_model2 or gla_model3(Model1 is test model, not available).
 
+### start
+Write the path of the input data into the function
+
+```R
+rm(list=ls())
+library(GHGLA)
+gla_model2("chr2D",                                   #Some species' genomes are so large that they can only be counted in terms of chromosomes
+            2,                                        #Which column of phenotype data is used
+            "/path/data.gene.list",                   #gene interval file
+            "/path/chr2D.anno.txt",                   #SnpEff results
+            "/path/control_group_phenotype.csv",      #Phenotype data for the control group
+            "/path/vcftoolsres/yourname",             #vcftools results
+            "/path/phenotype.csv",                    #phenotype data
+            "/output_path/")
+```
+or
 ```R
 rm(list=ls())
 library(GHGLA)
