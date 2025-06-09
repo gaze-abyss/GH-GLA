@@ -66,5 +66,9 @@ gla_model3("chr2D",                                   #Some species' genomes are
 
 ### out
 
+## Citation
+If you make use of GH-GLA in your research, we would appreciate a citation of the following paper:
+
+
 ## about GH-GLA
 > It is currently in beta and the features are not complete
