@@ -65,6 +65,15 @@ gla_model3("chr2D",                                   #Some species' genomes are
 ```
 
 ### out
+```
+     pvalue           genename
+1 0.1161946 TraesKN2D01HG00010
+2 0.8977729 TraesKN2D01HG00020
+3 0.6568004 TraesKN2D01HG00030
+4 0.8100888 TraesKN2D01HG00040
+5 0.3255892 TraesKN2D01HG00050
+6 0.1742378 TraesKN2D01HG00060
+```
 
 ## Citation
 If you make use of GH-GLA in your research, we would appreciate a citation of the following paper: 
