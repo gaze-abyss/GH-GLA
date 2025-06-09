@@ -1,6 +1,6 @@
 Package: GHGLA
 Title: Gene Hunter based on Gene-Level Association (GH-GLA)
-Version: 0.0.0.9100
+Version: 0.9.200
 Authors@R: 
     person("Haojie Wang", email = "hjwang@genetics.ac.cn", role = c("aut","com","cph","cre"))
 Description: beta.
