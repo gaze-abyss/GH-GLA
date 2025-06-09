@@ -104,5 +104,5 @@ gla_model3 = function(filename,
   chi_res = data.frame(pvalue = chi_res)
   chi_res$genename = colnames(res.score)[1:(dim(res.score)[2]-1)]
 
-  saveRDS(chi_res,paste0(outpath,"/",pheno_column,".rds"))
+  saveRDS(chi_res,paste0(outpath,"/model3_",filename,"_",pheno_column,".rds"))
 }
