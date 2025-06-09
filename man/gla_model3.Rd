@@ -36,7 +36,7 @@ gla_model3(
 RDS
 }
 \description{
-Package gla_model3
+description of gla_model3
 }
 \examples{
 gla_model3("chr4A",
@@ -47,5 +47,4 @@ gla_model3("chr4A",
 "/path/vcftoolsres/",
 "/path/phenotype.csv",
 "/respath/")
-
 }
