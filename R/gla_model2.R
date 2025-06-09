@@ -41,7 +41,7 @@ gla_model2 = function(filename,
                       outpath,
                       cutup,
                       cutdown){
-  
+  ####input data
   df = fread(paste0(genotype_path,"/",filename,".012"),header = F)
   df = df[,-1]
   pos = read.table(paste0(genotype_path,"/",filename,".012.pos"))
@@ -69,7 +69,7 @@ gla_model2 = function(filename,
   rownames(pheno) = pheno[,1]
   df = df[,colnames(df)%in%pheno[,1]]
   wildtype = read.csv(wt,header = T)
-
+  ###process
   gc()
   res.score = data.frame(colnames(df))
   for (i in 1:dim(anno1)[1]) {
