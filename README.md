@@ -84,7 +84,7 @@ head(data)
 ```
 
 ## Citation
-If you make use of GH-GLA in your research, we would appreciate a citation of the following paper: 
+If you use GH-GLA in your research, please cite the following paper: 
 > **Wang, H., Sun, F., Shi, Z., Yang, Y., Ding, Y., Zhang, T., ... & Zheng, S. (2025). A Forward Genetics Strategy for High‐Throughput Gene Identification via Precise Image‐Based Phenotyping of an Indexed EMS Mutant Library. Advanced Science, e14793.** 
 
 ## about GH-GLA
