@@ -88,4 +88,4 @@ If you use GH-GLA in your research, please cite the following paper:
 > **Wang, H., Sun, F., Shi, Z., Yang, Y., Ding, Y., Zhang, T., ... & Zheng, S. (2025). A Forward Genetics Strategy for High‐Throughput Gene Identification via Precise Image‐Based Phenotyping of an Indexed EMS Mutant Library. Advanced Science, e14793.** 
 
 ## about GH-GLA
-> If you have any questions, please feel free to leave a message
+> If you have any questions, please feel free to leave a message.
