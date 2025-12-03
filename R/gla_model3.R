@@ -78,7 +78,7 @@ gla_model3 = function(filename,
       tmp.df[,tmp.dflength] = 1:dim(tmp.df)[1]
       a = apply(tmp.df,1,givescore)
       asum = data.frame(apply(a,1,scoresum))
-      asum$apply.a..1..scoresum.[which(asum$apply.a..1..scoresum. == 0)] = 1.001
+      asum$apply.a..1..scoresum.[which(asum$apply.a..1..scoresum. == 0)] = 1.0000001
       colnames(asum) = str_split(str_split(anno1$V9[i],"=",simplify = T)[,2],";",simplify = T)[,1]
       res.score = cbind(res.score,asum)
     }
