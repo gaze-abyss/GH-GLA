@@ -61,9 +61,9 @@ gla_model2 = function(filename,
   snpeffect = snpeffect[snpeffect$V2%in%as.numeric(rownames(df)),]
   snpeffect$score = snpeffect$V3
   snpeffect$score[grep("HIGH",snpeffect$V3)] = 5.001
-  snpeffect$score[grep("MODERATE",snpeffect$V3)] = 4.001
-  snpeffect$score[grep("LOW",snpeffect$V3)] = 3.001
-  snpeffect$score[grep("MODIFIER",snpeffect$V3)] = 2.001
+  snpeffect$score[grep("MODERATE",snpeffect$V3)] = 4.0001
+  snpeffect$score[grep("LOW",snpeffect$V3)] = 3.00001
+  snpeffect$score[grep("MODIFIER",snpeffect$V3)] = 2.000001
 
   pheno = read.csv(phenotype)
   rownames(pheno) = pheno[,1]
@@ -84,7 +84,7 @@ gla_model2 = function(filename,
       tmp.df[,tmp.dflength] = 1:dim(tmp.df)[1]
       a = apply(tmp.df,1,givescore)
       asum = data.frame(apply(a,1,scoresum))
-      asum$apply.a..1..scoresum.[which(asum$apply.a..1..scoresum. == 0)] = 1.001
+      asum$apply.a..1..scoresum.[which(asum$apply.a..1..scoresum. == 0)] = 0.0000001
       colnames(asum) = str_split(str_split(anno1$V9[i],"=",simplify = T)[,2],";",simplify = T)[,1]
       res.score = cbind(res.score,asum)
     }
@@ -93,20 +93,18 @@ gla_model2 = function(filename,
   ####asscoc calculate
   ###clean input data
   res.score = res.score[,-1]
-  res.score[rownames(res.score)%in%wildtype[,1],] = 0
+  res.score[rownames(res.score)%in%wildtype[,1],] = 0.0000001
   res.score$pheno2 = pheno[rownames(res.score),pheno_column]
   if (length(which(is.na(res.score$pheno2) == T)) != 0) {
     res.score = res.score[-which(is.na(res.score$pheno2) == T),]
   }
-  if (length(which(is.na(res.score$pheno2) == T)) != 0) {
-    res.score = res.score[-which(is.na(res.score$pheno2) == T),]
-  }
+
   ####mutation enrichment  
   pheno_wt = read.csv(wt)
   pheno_wt = pheno_wt[pheno_wt[,1] %in% rownames(res.score),]
   pheno_wt = pheno_wt[,pheno_column]
-  cut_up = mean(pheno_wt)*cutup
-  cut_down = mean(pheno_wt)*cutdown
+  cut_up = mean(pheno_wt,na.rm = T)*cutup
+  cut_down = mean(pheno_wt,na.rm = T)*cutdown
   
   cut_up_sample = rownames(res.score)[which(res.score$pheno2 > cut_up)]
   cut_down_sample = rownames(res.score)[which(res.score$pheno2 < cut_down)]
@@ -115,9 +113,9 @@ gla_model2 = function(filename,
   wt_num = length(pheno_wt)
   chi.res = c()
   for (i in 1:(dim(res.score)[2]-1)){
-    r1 = length(which(res.score[rownames(res.score)%in%mutant_sample,i] > 1.001))
+    r1 = length(which(res.score[rownames(res.score)%in%mutant_sample,i] > 0.0000001))
     r2 = length(mutant_sample) -r1
-    r3 = length(which(res.score[!rownames(res.score)%in%mutant_sample,i] > 1.001))
+    r3 = length(which(res.score[!rownames(res.score)%in%mutant_sample,i] > 0.0000001))
     r4 = dim(res.score)[1]- wt_num - length(mutant_sample) -r3
     enrichment = matrix(c(r1, r2, r3 ,r4),ncol=2, dimnames = list(c('mutation','nomutation'),
                                                                   c('yes','no')))
