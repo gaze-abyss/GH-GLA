@@ -1,3 +1,6 @@
+# V0.96  2025.12.3
+Debug and upload some test file
+
 # V0.95  2025.6.9
 Improve the parameter tuning guidance, usage workflows and other instruction documents, and add result examples
 
