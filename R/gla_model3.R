@@ -55,9 +55,9 @@ gla_model3 = function(filename,
   snpeffect = snpeffect[snpeffect$V2%in%as.numeric(rownames(df)),]
   snpeffect$score = snpeffect$V3
   snpeffect$score[grep("HIGH",snpeffect$V3)] = 5.001
-  snpeffect$score[grep("MODERATE",snpeffect$V3)] = 4.001
-  snpeffect$score[grep("LOW",snpeffect$V3)] = 3.001
-  snpeffect$score[grep("MODIFIER",snpeffect$V3)] = 2.001
+  snpeffect$score[grep("MODERATE",snpeffect$V3)] = 4.0001
+  snpeffect$score[grep("LOW",snpeffect$V3)] = 3.00001
+  snpeffect$score[grep("MODIFIER",snpeffect$V3)] = 2.000001
 
   pheno = read.csv(phenotype)
   rownames(pheno) = pheno[,1]
